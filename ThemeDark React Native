@@ -1,0 +1,187 @@
+import React, { useState, useEffect, useContext } from "react";
+import { EventRegister } from "react-native-event-listeners";
+import { StatusBar } from "react-native";
+
+import { Appearance } from "react-native";
+
+import { useTheme } from "@react-navigation/native";
+
+import {
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+  Switch,
+} from "react-native";
+
+import Task from "../ZTasks/components/Task";
+
+import { DefaultTheme, DarkTheme } from "@react-navigation/native";
+import theme from "./config/theme";
+
+export default function App() {
+  const [task, setTask] = useState();
+
+  const [taskItem, setTaskItem] = useState([]);
+
+  //  setTask(task);
+
+  const handleAddTask = (task) => {
+    // console.log(task);
+    Keyboard.dismiss();
+    setTaskItem([...taskItem, task]);
+    setTask(null);
+  };
+
+  const completeTask = (index) => {
+    let itemCopy = [...taskItem];
+    itemCopy.splice(index, 1);
+    setTaskItem(itemCopy);
+  };
+
+  const [darkApp, setDarkApp] = useState(false);
+  // //const appTheme = darkApp ? DarkTheme : DefaultTheme;
+  // const { colors } = useTheme();
+  //const [theme, setTheme] = useState(Appearance.getColorScheme());
+  // Appearance.addChangeListener((scheme) => {
+  //   console.log(scheme);
+  // });
+
+  useEffect(() => {
+    let EventListener = EventRegister.addEventListener(
+      "changeThemeEvent",
+      (data) => {
+        // //this.setState({
+        //   data,
+        // });
+        alert(data);
+        //setDarkApp(darkApp);
+      }
+    );
+    return () => {
+      EventRegister.removeEventListener(EventListener);
+    };
+  }, []);
+
+  return (
+    <>
+      <View>
+        <StatusBar
+          barStyle="light-content"
+          color="primary"
+          hidden={false}
+          backgroundColor="auto"
+          translucent={true}
+        />
+        <View style={theme(darkApp)}>
+          <View style={styles.tasksWrapper}>
+            <Switch
+              value={darkApp}
+              onValueChange={(val) => {
+                setDarkApp(val);
+                EventRegister.emit("changeThemeEvent", val);
+              }}
+            />
+            <Text style={styles.sectionTitle}>Today's Tasks</Text>
+
+            <View style={styles.items}>
+              {taskItem.map((item, index) => {
+                return (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => completeTask(index)}
+                  >
+                    <Task text={item} />
+                  </TouchableOpacity>
+                );
+              })}
+              ;
+              {/* <Task text={"Task 1"} />
+              <Task text={"Task 2"} />
+              <Task text={"Task 3"} />
+              <Task text={"Task 4"} />
+              <Task text={"Task 5"} /> */}
+              {/* <Task text={"Task 6"} />
+              <Task text={"Task 7"} />
+              <Task text={"Task 8"} /> */}
+            </View>
+          </View>
+
+          <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={styles.writeTaskWrapper}
+          >
+            <TextInput
+              style={styles.input}
+              placeholder={"Write a task"}
+              value={task}
+              onChangeText={(text) => setTask(text)}
+            />
+            <TouchableOpacity onPress={() => handleAddTask()}>
+              <View style={styles.addWrapper}>
+                <TextInput style={styles.addText}></TextInput>
+              </View>
+            </TouchableOpacity>
+          </KeyboardAvoidingView>
+        </View>
+      </View>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+  tasksWrapper: {
+    paddingTop: 80,
+    paddingHorizontal: 20,
+  },
+  sectionTitle: {
+    fontSize: 40,
+    color: "white",
+
+    marginTop: 30,
+  },
+  items: {
+    marginTop: 25,
+    color: "white",
+  },
+  writeTaskWrapper: {
+    position: "absolute",
+    bottom: 60,
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
+  input: {
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    top: 300,
+    backgroundColor: "white",
+    borderRadius: 60,
+    borderColor: "#C0C0C0",
+    borderWidth: 4,
+    width: 250,
+  },
+  addWrapper: {
+    width: 40,
+    height: 40,
+    bottom: 5,
+    top: 300,
+    right: 81,
+    right: 20,
+    backgroundColor: "#FFF",
+    borderRadius: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    borderColor: "#C0C0C0",
+    borderWidth: 4,
+  },
+  addText: {},
+});
