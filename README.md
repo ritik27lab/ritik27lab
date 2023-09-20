@@ -5,13 +5,13 @@
 
 - 🌱 My tech Stack **React JS, React Native, JavaScript, TypeScript, Java 8, Solidity, Rust, Blockchain**
 
-- ☝️ What else I can do [UI/UX Designing, Bringing Design into reality](UI/UX Designing, Bringing Design into reality)
+- ☝️ What else I can do (UI/UX Designing, Bringing Design into reality)
 
 - 💬 Ask me about **ReactJS, UI/UX, Design Terminoligies**
 
 - 👯 I’m looking to collaborate on **Blockchain and NFT**
 
-- 🤝 My past project **Gen Z Media Podcast Application**
+- 🤝 My past project **Gen Z Media Podcast Application, retire.ly**
 
 - ✍️ I’m currently learning [Node JS, Solidity, Rust, Ethereum](Node JS, Solidity, Rust, Ethereum)
 
