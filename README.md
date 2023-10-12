@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Ritik</h1>
 <h3 align="center">Expertise on design centric multi-platform application development.</h3>
 
-- 🔭 I’m currently working on **Retirely Finance Application**
+- 🔭 I’m currently working on **RAPIDEX**
 
 - 🌱 My tech Stack **React JS, React Native, JavaScript, TypeScript, Java 8, Solidity, Rust, Blockchain**
 
@@ -11,7 +11,7 @@
 
 - 👯 I’m looking to collaborate on **Blockchain and NFT**
 
-- 🤝 My past project **Gen Z Media Podcast Application, retire.ly**
+- 🤝 My past project **Gen Z Media Podcast Application, retire.ly, Washzone Inc, Wynn.io, Litools.ai**
 
 - ✍️ I’m currently learning [Node JS, Solidity, Rust, Ethereum](Node JS, Solidity, Rust, Ethereum)
 
