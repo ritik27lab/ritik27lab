@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on **RAPIDEX**
 
-- 🌱 My tech Stack **React JS, React Native, JavaScript, TypeScript, Java 8, Solidity, Rust, Blockchain**
+- 🌱 My tech Stack **React JS, React Native, JavaScript, TypeScript, Java 8, Solidity, Blockchain**
 
 - ☝️ What else I can do (UI/UX Designing, Bringing Design into reality)
 
