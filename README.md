@@ -1,14 +1,5 @@
 <div align="center">
 
-```
-██████╗ ██╗████████╗██╗██╗  ██╗
-██╔══██╗██║╚══██╔══╝██║██║ ██╔╝
-██████╔╝██║   ██║   ██║█████╔╝ 
-██╔══██╗██║   ██║   ██║██╔═██╗ 
-██║  ██║██║   ██║   ██║██║  ██╗
-╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝╚═╝  ╚═╝
-```
-
 ### hey, I'm Ritik — I build things people actually want to use.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/ritikbhalekar27)
@@ -72,20 +63,6 @@
 | **Washzone Inc** | On-demand service platform |
 | **retire.ly** | Financial planning app |
 | **Gen Z Media** | Podcast application |
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-![Ritik's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ritik27lab&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ritik27lab&layout=compact&theme=tokyonight&hide_border=true)
-
-![GitHub Streak](https://streak-stats.demolab.com?user=ritik27lab&theme=tokyonight&hide_border=true)
-
-</div>
 
 ---
 
